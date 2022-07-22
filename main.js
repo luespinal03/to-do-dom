@@ -12,10 +12,10 @@ addButton.addEventListener('click', function () {
     event.preventDefault();
     // if there is anything in the input box, add it to the list
     if (userInput.value !== '') {
+
         // create a new li
         let newLi = document.createElement('li');
        
-
         // li innerText is w.e user put in the input box
         newLi.innerText = userInput.value;
         // adding an event listener for each li created
@@ -25,23 +25,29 @@ addButton.addEventListener('click', function () {
         let newLiDiv = document.createElement('div');
         let deleteButton = document.createElement('button');
         let editLiButton = document.createElement('button');
+        let editTextInput = document.createElement("input");
+        let editTextSubmit = document.createElement("button");
 
 
         // BUTTONS CREATED FOR LI'S
         deleteButton.innerText = 'Delete';
         editLiButton.innerText = 'Edit';
+        editTextSubmit.innerText = "Submit";
         
 
 
         // GIVING ID'S TO BUTTONS CREATED FOR LI'S
         editLiButton.setAttribute('id', 'editButton');
         deleteButton.setAttribute('id', 'deleteButton');
+        editTextInput.setAttribute("placeholder", "Enter edit here.");
 
 
         ul.appendChild(newLi);
         // newLi.appendChild(newLiDiv);
         newLi.appendChild(deleteButton);
         newLi.appendChild(editLiButton);
+        newLi.appendChild(editTextInput);
+        newLi.appendChild(editTextSubmit);
 
 
         // EVENT LISTENER FOR DELETE BUTTON NEXT TO EACH LI
@@ -52,11 +58,12 @@ addButton.addEventListener('click', function () {
 
         // EDIT BUTTON
         editLiButton.addEventListener('click', function () {
-            if (newLi !== '') {
-                newLi.innerText = userInput.value;
-            }
-        });
+            // if (newLi !== '') {
+            //     // newLi.innerText = userInput.value;
+            // }
 
+            // newLi === editTextInput.innerText
+        });
 
 
         // EVENT LISTENER TAKING CARE OF LINE-THROUGH
