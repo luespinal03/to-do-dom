@@ -22,7 +22,7 @@ addButton.addEventListener('click', function () {
         // append li to ul
 
         // CREATING A NEW DELETE BUTTON NEXT TO EACH LI
-        let newLiDiv = document.createElement('div');
+        // let newLiDiv = document.createElement('div');
         let deleteButton = document.createElement('button');
         let editLiButton = document.createElement('button');
         let editTextInput = document.createElement("input");
@@ -37,8 +37,8 @@ addButton.addEventListener('click', function () {
 
 
         // GIVING ID'S TO BUTTONS CREATED FOR LI'S
-        editLiButton.setAttribute('id', 'editButton');
-        deleteButton.setAttribute('id', 'deleteButton');
+        editLiButton.setAttribute('class', 'btn btn-primary');
+        deleteButton.setAttribute('class', 'btn btn-secondary')
         editTextInput.setAttribute("placeholder", "Enter edit here.");
 
 
