@@ -37,8 +37,8 @@ addButton.addEventListener('click', function () {
 
 
         // GIVING ID'S TO BUTTONS CREATED FOR LI'S
-        editLiButton.setAttribute('class', 'btn btn-primary');
-        deleteButton.setAttribute('class', 'btn btn-secondary')
+        editLiButton.setAttribute('class', 'btn btn-primary badge rounded-pill bg-primary');
+        deleteButton.setAttribute('class', 'btn btn-secondary badge rounded-pill bg-secondary')
         editTextInput.setAttribute("placeholder", "Enter edit here.");
 
 
